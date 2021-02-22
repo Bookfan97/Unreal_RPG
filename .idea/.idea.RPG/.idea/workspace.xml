@@ -6,23 +6,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/CharacterMerge.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/StaticMesh.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Character/CharacterMerge.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Character/Movement.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/MeshMergeFunctionLibrary.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/MeshMergeFunctionLibrary.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Character/ThirdPersonJump_End.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Character/ThirdPersonJump_Loop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Character/ThirdPersonJump_Start.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/Amulet.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/BP_Amulet.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/MI_Amulet_Chain_A_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/M_Amulet1_A.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/T_SP2_Chain_low_SFB_Chain_1_Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/T__SP2_Chain_low_SFB_Chain_1_AlbedoOpacity.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/T__SP2_Chain_low_SFB_Chain_1_MetalAOHeightRough.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/BasePickup.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/BasePickup.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/Pickup.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/Pickup.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BPPlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BPPlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/BP_PlayerAnim.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/BP_PlayerAnim.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonJump_End.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonJump_End.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonJump_Loop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonJump_Loop.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonJump_Start.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonJump_Start.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,10 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/Pickup.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/Pickup.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/BasePickup.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/BasePickup.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRaO4C6m71QNLHLzRlbKoMG0P7" />
@@ -581,7 +591,9 @@
       <workItem from="1613255863311" duration="11560000" />
       <workItem from="1613335666189" duration="2390000" />
       <workItem from="1613933384027" duration="263000" />
-      <workItem from="1613933899203" duration="2889000" />
+      <workItem from="1613933899203" duration="7285000" />
+      <workItem from="1613952962174" duration="2322000" />
+      <workItem from="1613955335333" duration="3267000" />
     </task>
     <servers />
   </component>
@@ -592,20 +604,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="3268" y="345" key="#Notifications" timestamp="1613255866627">
-      <screen x="2560" y="0" width="1920" height="1040" />
-    </state>
-    <state x="3268" y="345" key="#Notifications/0.0.2560.1400/2560.0.1920.1040@2560.0.1920.1040" timestamp="1613255866627" />
-    <state x="853" y="345" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613933495573">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="853" y="345" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1613933495573" />
-    <state x="3200" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400/2560.0.1920.1040@2560.0.1920.1040" timestamp="1613252089031" />
-    <state x="988" y="339" key="RiderGenerateDialog" timestamp="1613263442660">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="988" y="339" key="RiderGenerateDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1613263442660" />
   </component>
 </project>

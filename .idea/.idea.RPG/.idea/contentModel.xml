@@ -26,10 +26,14 @@
       <e p="RPG.uproject" t="Include" />
       <e p="Source" t="Include">
         <e p="RPG" t="Include">
+          <e p="BasePickup.cpp" t="Include" />
+          <e p="BasePickup.h" t="Include" />
           <e p="MainAnimInstance.cpp" t="Include" />
           <e p="MainAnimInstance.h" t="Include" />
           <e p="MeshMergeFunctionLibrary.cpp" t="Include" />
           <e p="MeshMergeFunctionLibrary.h" t="Include" />
+          <e p="Pickup.cpp" t="Include" />
+          <e p="Pickup.h" t="Include" />
           <e p="PlayerCharacter.cpp" t="Include" />
           <e p="PlayerCharacter.h" t="Include" />
           <e p="RPG.Build.cs" t="Include" />
