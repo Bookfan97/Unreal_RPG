@@ -43,6 +43,15 @@ APlayerCharacter::APlayerCharacter()
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 840.f, 0.0f);
 	GetCharacterMovement()->JumpZVelocity = 650.f;
 	GetCharacterMovement()->AirControl = 0.2f;
+
+	/*Default Player Stats*/
+	maxHealth=100.f;
+	health = 75.f;
+	stamina =120.f;
+	maxStamina= 350.f;
+	mana=75.f;
+	maxMana= 350.f;;
+	currency=0;
 }
 
 // Called when the game starts or when spawned

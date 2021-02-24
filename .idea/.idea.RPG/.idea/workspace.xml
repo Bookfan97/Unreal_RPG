@@ -6,29 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Character/ThirdPersonJump_End.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Character/ThirdPersonJump_Loop.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Character/ThirdPersonJump_Start.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/Amulet.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/BP_Amulet.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/MI_Amulet_Chain_A_Inst.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/M_Amulet1_A.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/T_SP2_Chain_low_SFB_Chain_1_Normal.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/T__SP2_Chain_low_SFB_Chain_1_AlbedoOpacity.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Items/Amulet/T__SP2_Chain_low_SFB_Chain_1_MetalAOHeightRough.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/BasePickup.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/BasePickup.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/Pickup.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/Pickup.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Character/BP_PlayerAnim.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/BP_PlayerAnim.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonJump_End.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonJump_End.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonJump_Loop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonJump_Loop.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonJump_Start.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonJump_Start.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +21,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/RPG/RPG.Build.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
@@ -46,6 +32,11 @@
       <option value="$PROJECT_DIR$/Source/RPG/Pickup.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/BasePickup.h" />
       <option value="$PROJECT_DIR$/Source/RPG/BasePickup.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" />
+      <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRaO4C6m71QNLHLzRlbKoMG0P7" />
@@ -594,6 +585,8 @@
       <workItem from="1613933899203" duration="7285000" />
       <workItem from="1613952962174" duration="2322000" />
       <workItem from="1613955335333" duration="3267000" />
+      <workItem from="1614051676019" duration="875000" />
+      <workItem from="1614132967333" duration="3824000" />
     </task>
     <servers />
   </component>
