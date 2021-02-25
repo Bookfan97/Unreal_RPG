@@ -6,6 +6,13 @@
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class EMovementStatus: uint8
+{
+	EMS_Walk UMETA(DisplayName = "Walk"),
+	EMS_Sprint UMETA(DisplayName = "Sprint")
+};
+
 UCLASS()
 class RPG_API APlayerCharacter : public ACharacter
 {
@@ -15,6 +22,11 @@ public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Enums")
+	EMovementStatus MovementStatus;
+
+	/*Update movement status and speed*/
+	void SetMovementStatus(EMovementStatus status);
 	
 	/** Set camera and camera boom to player	 */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess = "true"))
@@ -31,6 +43,17 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	/*Functions for checking for shift key*/
+	bool bShiftKeyDown;
+	void ShiftKeyDown();
+	void ShiftKeyUp();
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement")
+	float sprintSpeed;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement")
+	float walkSpeed;
+	
 	/*
 	 * Player Stats
 	 */

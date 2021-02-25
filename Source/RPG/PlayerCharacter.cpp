@@ -44,6 +44,11 @@ APlayerCharacter::APlayerCharacter()
 	GetCharacterMovement()->JumpZVelocity = 650.f;
 	GetCharacterMovement()->AirControl = 0.2f;
 
+	sprintSpeed = 900.f;
+	walkSpeed = 650.f;
+
+//	bShiftKeyDown = false;
+	
 	/*Default Player Stats*/
 	maxHealth=100.f;
 	health = 75.f;
@@ -52,6 +57,29 @@ APlayerCharacter::APlayerCharacter()
 	mana=75.f;
 	maxMana= 350.f;;
 	currency=0;
+}
+
+void APlayerCharacter::SetMovementStatus(EMovementStatus status)
+{
+	MovementStatus = status;
+	if (MovementStatus == EMovementStatus::EMS_Sprint)
+	{
+		GetCharacterMovement()->MaxWalkSpeed = sprintSpeed;
+	}
+	else
+	{
+		GetCharacterMovement()->MaxWalkSpeed = walkSpeed;
+	}
+}
+
+void APlayerCharacter::ShiftKeyDown()
+{
+	bShiftKeyDown = true;
+}
+
+void APlayerCharacter::ShiftKeyUp()
+{
+	bShiftKeyDown = false;
 }
 
 // Called when the game starts or when spawned
@@ -83,6 +111,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &APlayerCharacter::ShiftKeyDown);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &APlayerCharacter::ShiftKeyUp);
 }
 
 void APlayerCharacter::MoveForward(float moveValue)

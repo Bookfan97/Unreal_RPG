@@ -29,4 +29,7 @@ class RPG_API UMainAnimInstance : public UAnimInstance
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Movement")
 	class APawn* Pawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Movement")
+	class APlayerCharacter* PlayerCharacter;
 };
