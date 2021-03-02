@@ -47,16 +47,23 @@ APlayerCharacter::APlayerCharacter()
 	sprintSpeed = 900.f;
 	walkSpeed = 650.f;
 
-//	bShiftKeyDown = false;
+	bShiftKeyDown = false;
 	
 	/*Default Player Stats*/
 	maxHealth=100.f;
 	health = 75.f;
-	stamina =120.f;
-	maxStamina= 350.f;
-	mana=75.f;
-	maxMana= 350.f;;
-	currency=0;
+	stamina = 120.f;
+	maxStamina = 350.f;
+	mana = 75.f;
+	maxMana = 350.f;
+	currency = 0;
+
+	/*Initialize Enums*/
+	MovementStatus = EMovementStatus::EMS_Walk;
+	StaminaStatus = EStaminaStatus::ESS_Default;
+
+	staminaDrainRate = 25.f;
+	minSprintStamina = 50.f;
 }
 
 void APlayerCharacter::SetMovementStatus(EMovementStatus status)
@@ -89,11 +96,105 @@ void APlayerCharacter::BeginPlay()
 	
 }
 
+void APlayerCharacter::SetStaminaUpdate(float DeltaTime)
+{
+	float deltaStamina = staminaDrainRate * DeltaTime;
+	switch (StaminaStatus)
+	{
+		case EStaminaStatus::ESS_Default:
+			if (bShiftKeyDown)
+			{
+				if(stamina - deltaStamina<= minSprintStamina)
+				{
+					SetStaminaStatus(EStaminaStatus::ESS_Empty);
+					stamina -= deltaStamina;
+				}
+				else
+				{
+					stamina -= deltaStamina;
+				}
+				SetMovementStatus(EMovementStatus::EMS_Sprint);
+			}
+			else
+			{
+				if (stamina + deltaStamina >= maxStamina)
+				{
+					stamina = maxStamina;
+				}
+				else
+				{
+					stamina += deltaStamina;
+				}
+				SetMovementStatus(EMovementStatus::EMS_Walk);
+			}
+			break;
+		case EStaminaStatus::ESS_Min:
+			break;
+		case EStaminaStatus::ESS_BelowMin:
+			if (bShiftKeyDown)
+			{
+				if (stamina - deltaStamina <= 0.f)
+				{
+					SetStaminaStatus(EStaminaStatus::ESS_Recover);
+					stamina = 0;
+					SetMovementStatus(EMovementStatus::EMS_Default);
+				}
+				else
+				{
+					stamina -= deltaStamina;
+					SetMovementStatus(EMovementStatus::EMS_Sprint);
+				}
+			}
+			else
+			{
+				if (stamina + deltaStamina >= minSprintStamina)
+				{
+					SetStaminaStatus(EStaminaStatus::ESS_Default);
+					stamina+=deltaStamina;
+				}
+				else
+				{
+					stamina += deltaStamina;
+				}
+				SetMovementStatus(EMovementStatus::EMS_Default);
+			}
+			break;
+		case EStaminaStatus::ESS_Recover:
+			if (stamina + deltaStamina >= minSprintStamina)
+			{
+				SetStaminaStatus(EStaminaStatus::ESS_Default);
+				stamina+=deltaStamina;
+			}
+			else
+			{
+				stamina+= deltaStamina;
+			}
+			SetMovementStatus(EMovementStatus::EMS_Default);
+			break;
+		case EStaminaStatus::ESS_Empty:
+			if (bShiftKeyDown)
+			{
+				stamina=0;
+			}
+			else
+			{
+				SetStaminaStatus(EStaminaStatus::ESS_Recover);
+				stamina+=deltaStamina;
+			}
+			SetMovementStatus(EMovementStatus::EMS_Default);
+			break;
+		case EStaminaStatus::ESS_Max:
+			break;
+		default:
+			break;
+	}
+}
+
 // Called every frame
 void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+		SetStaminaUpdate(DeltaTime);
 }
 
 // Called to bind functionality to input

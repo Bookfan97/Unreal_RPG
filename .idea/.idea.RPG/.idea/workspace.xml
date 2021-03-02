@@ -6,19 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MainPlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_MainPlayerController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/MyRPGGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/MyRPGGameMode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Character/BP_PlayerAnim.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/BP_PlayerAnim.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/HUD/WBP_ManaBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/HUD/WBP_ManaBar.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/HUD/WBP_StaminaBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/HUD/WBP_StaminaBar.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" afterDir="false" />
     </list>
@@ -45,10 +33,10 @@
       <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.h" />
       <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.cpp" />
-      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" />
-      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRaO4C6m71QNLHLzRlbKoMG0P7" />
@@ -600,6 +588,10 @@
       <workItem from="1614051676019" duration="875000" />
       <workItem from="1614132967333" duration="3824000" />
       <workItem from="1614205732814" duration="6794000" />
+      <workItem from="1614642358007" duration="426000" />
+      <workItem from="1614642842884" duration="4556000" />
+      <workItem from="1614648167390" duration="663000" />
+      <workItem from="1614648860254" duration="1890000" />
     </task>
     <servers />
   </component>

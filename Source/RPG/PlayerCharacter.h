@@ -9,8 +9,21 @@
 UENUM(BlueprintType)
 enum class EMovementStatus: uint8
 {
+	EMS_Default UMETA(DisplayName = "Default"),
 	EMS_Walk UMETA(DisplayName = "Walk"),
-	EMS_Sprint UMETA(DisplayName = "Sprint")
+	EMS_Sprint UMETA(DisplayName = "Sprint"),
+	EMS_Max UMETA(DisplayName = "Max")
+};
+
+UENUM(BlueprintType)
+enum class EStaminaStatus: uint8
+{
+	ESS_Default UMETA(DisplayName = "Default"),
+	ESS_Recover UMETA(DisplayName = "Recovery"),
+	ESS_Empty UMETA(DisplayName = "Depleted Stamina"),
+	ESS_Min UMETA(DisplayName = "Min"),
+	ESS_BelowMin UMETA(DisplayName = "Below Min"),
+	ESS_Max UMETA(DisplayName = "Max")
 };
 
 UCLASS()
@@ -24,10 +37,21 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Enums")
 	EMovementStatus MovementStatus;
-
+	
 	/*Update movement status and speed*/
 	void SetMovementStatus(EMovementStatus status);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Enums")
+	EStaminaStatus StaminaStatus;
+ 
+    FORCEINLINE void SetStaminaStatus(EStaminaStatus status) { StaminaStatus = status;}
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	float staminaDrainRate;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	float minSprintStamina;
+
 	/** Set camera and camera boom to player	 */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
@@ -76,6 +100,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	void SetStaminaUpdate(float DeltaTime);
 
 public:	
 	// Called every frame
