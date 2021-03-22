@@ -6,12 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +20,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/RPG/RPG.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
-      <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" />
       <option value="$PROJECT_DIR$/Source/RPG/Pickup.h" />
       <option value="$PROJECT_DIR$/Source/RPG/Pickup.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/BasePickup.h" />
@@ -35,8 +31,12 @@
       <option value="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" />
       <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.h" />
       <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.cpp" />
-      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRaO4C6m71QNLHLzRlbKoMG0P7" />
@@ -587,6 +587,11 @@
       <workItem from="1613955335333" duration="3267000" />
       <workItem from="1614051676019" duration="875000" />
       <workItem from="1614132967333" duration="3824000" />
+      <workItem from="1614205732814" duration="6794000" />
+      <workItem from="1614642358007" duration="426000" />
+      <workItem from="1614642842884" duration="4556000" />
+      <workItem from="1614648167390" duration="663000" />
+      <workItem from="1614648860254" duration="1890000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,26 @@
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class EMovementStatus: uint8
+{
+	EMS_Default UMETA(DisplayName = "Default"),
+	EMS_Walk UMETA(DisplayName = "Walk"),
+	EMS_Sprint UMETA(DisplayName = "Sprint"),
+	EMS_Max UMETA(DisplayName = "Max")
+};
+
+UENUM(BlueprintType)
+enum class EStaminaStatus: uint8
+{
+	ESS_Default UMETA(DisplayName = "Default"),
+	ESS_Recover UMETA(DisplayName = "Recovery"),
+	ESS_Empty UMETA(DisplayName = "Depleted Stamina"),
+	ESS_Min UMETA(DisplayName = "Min"),
+	ESS_BelowMin UMETA(DisplayName = "Below Min"),
+	ESS_Max UMETA(DisplayName = "Max")
+};
+
 UCLASS()
 class RPG_API APlayerCharacter : public ACharacter
 {
@@ -15,7 +35,23 @@ public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Enums")
+	EMovementStatus MovementStatus;
 	
+	/*Update movement status and speed*/
+	void SetMovementStatus(EMovementStatus status);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Enums")
+	EStaminaStatus StaminaStatus;
+ 
+    FORCEINLINE void SetStaminaStatus(EStaminaStatus status) { StaminaStatus = status;}
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	float staminaDrainRate;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	float minSprintStamina;
+
 	/** Set camera and camera boom to player	 */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
@@ -31,6 +67,17 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	/*Functions for checking for shift key*/
+	bool bShiftKeyDown;
+	void ShiftKeyDown();
+	void ShiftKeyUp();
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement")
+	float sprintSpeed;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement")
+	float walkSpeed;
+	
 	/*
 	 * Player Stats
 	 */
@@ -53,6 +100,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	void SetStaminaUpdate(float DeltaTime);
 
 public:	
 	// Called every frame

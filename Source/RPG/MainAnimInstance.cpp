@@ -4,6 +4,7 @@
 #include "MainAnimInstance.h"
 
 #include "GameFramework/PawnMovementComponent.h"
+#include "PlayerCharacter.h"
 
 void UMainAnimInstance::NativeInitializeAnimation()
 {
@@ -11,6 +12,10 @@ void UMainAnimInstance::NativeInitializeAnimation()
 	if (Pawn == nullptr)
 	{
 		Pawn = TryGetPawnOwner();
+		if (Pawn)
+		{
+			PlayerCharacter = Cast<APlayerCharacter>(Pawn);
+		}
 	}
 }
 
@@ -31,5 +36,10 @@ void UMainAnimInstance::UpdateAnimationProperties()
 
 		//Update whether the player is in the air
 		bIsInAir = Pawn->GetMovementComponent()->IsFalling();
+
+		if (PlayerCharacter == nullptr)
+		{
+			PlayerCharacter = Cast<APlayerCharacter>(Pawn);
+		}
 	}
 }
