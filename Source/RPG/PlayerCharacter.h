@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
 
@@ -59,6 +61,8 @@ public:
 	/** Forward declaring camera component	 */
 	class UCameraComponent* FollowCamera;
 
+	USphereComponent* SphereCollider;
+	
 	/** Base turn rate to scale turning functions for camera	 */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -71,6 +75,12 @@ public:
 	bool bShiftKeyDown;
 	void ShiftKeyDown();
 	void ShiftKeyUp();
+
+	UFUNCTION()
+     void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	UFUNCTION()
+        void OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement")
 	float sprintSpeed;
@@ -123,6 +133,9 @@ public:
 	 *@param turnRate is the normalized rate*/
 	void LookUpRate(float turnRate);
 
+	UFUNCTION()
+	void Interaction();
+	
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const {return CameraBoom;}
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const {return FollowCamera;}
 };

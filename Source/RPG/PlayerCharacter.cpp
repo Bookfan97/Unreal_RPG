@@ -4,6 +4,8 @@
 #include "PlayerCharacter.h"
 
 
+
+#include "DrawDebugHelpers.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -25,6 +27,15 @@ APlayerCharacter::APlayerCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("Follow Camera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false; //Use the controller rotation
+
+	/** Create Sphere Collider*/
+	SphereCollider = CreateDefaultSubobject<USphereComponent>(TEXT("Interaction Sphere"));
+	SphereCollider->SetupAttachment(GetRootComponent());
+	SphereCollider->SetSphereRadius(150.f);
+	SphereCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+	SphereCollider->SetCollisionResponseToChannel(nullptr, ECollisionResponse::ECR_Overlap);
+	SphereCollider->OnComponentBeginOverlap.AddDynamic(this, &APlayerCharacter::OnXXXOverlapBegin);
+	SphereCollider->OnComponentEndOverlap.AddDynamic(this, &APlayerCharacter::OnXXXOverlapEnd);
 
 	/** Set size for collision capsule */
 	GetCapsuleComponent()->SetCapsuleSize(48.f, 95.f);
@@ -89,11 +100,19 @@ void APlayerCharacter::ShiftKeyUp()
 	bShiftKeyDown = false;
 }
 
+void APlayerCharacter::OnOverlapBegin(AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+	bool bFromSweep, const FHitResult& SweepResult)
+{
+}
+
+void APlayerCharacter::OnOverlapEnd(AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+}
+
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 void APlayerCharacter::SetStaminaUpdate(float DeltaTime)
@@ -212,6 +231,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APlayerCharacter::Interaction);
+	//PlayerInputComponent->BindAction("Interact", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &APlayerCharacter::ShiftKeyDown);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &APlayerCharacter::ShiftKeyUp);
 }
@@ -252,6 +273,32 @@ void APlayerCharacter::TurnAtRate(float turnRate)
 void APlayerCharacter::LookUpRate(float turnRate)
 {
 	AddControllerPitchInput(turnRate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
+FVector LineTraceDistance;
+
+void APlayerCharacter::Interaction()
+{
+	/*FVector Start;
+	FVector End;
+	FVector PlayerEyesLoc;
+	FRotator PlayerEyesRot;
+	GetActorEyesViewPoint(PlayerEyesLoc, PlayerEyesRot);
+	Start = PlayerEyesLoc;
+	End = PlayerEyesLoc + (PlayerEyesRot.Vector() * LineTraceDistance);
+	FCollisionQueryParams TraceParams(FName(TEXT("InteractTrace")), true, this);
+	FHitResult InteractHit = FHitResult(ForceInit);
+	bool bIsHit = GetWorld()->LineTraceSingleByChannel(InteractHit, Start, End, ECC_GameTraceChannel3, TraceParams);
+	if(bIsHit)
+	{
+		// start to end, green, will lines always stay on, depth priority, thickness of line
+		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5.f, ECC_WorldStatic, 1.f);
+		// implements interface
+		/*if(InteractHit.GetActor()->GetClass()->ImplementsInterface(UInteractiveActor::StaticClass()))
+		{
+			IIntera::Execute_Interact(InteractHit.GetActor());
+		}#1#
+	}*/
 }
 
 

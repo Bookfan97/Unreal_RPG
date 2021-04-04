@@ -6,7 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" afterDir="false" />
     </list>
@@ -20,7 +22,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/RPG/RPG.Build.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/CoreUObject/Public/UObject/Linker.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -35,6 +41,9 @@
       <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/InteractionInterface.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/InteractiveProp.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/InteractiveProp.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" />
       <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
     </changedPaths>
@@ -592,6 +601,7 @@
       <workItem from="1614642842884" duration="4556000" />
       <workItem from="1614648167390" duration="663000" />
       <workItem from="1614648860254" duration="1890000" />
+      <workItem from="1617560619835" duration="7566000" />
     </task>
     <servers />
   </component>
@@ -600,6 +610,9 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
