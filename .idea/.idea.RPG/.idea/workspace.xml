@@ -6,9 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/MyInteractiveProp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueAIController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueAIController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueComponent.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/RPG.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" afterDir="false" />
     </list>
@@ -22,11 +31,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/RPG/RPG.Build.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/CoreUObject/Public/UObject/Linker.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_4.26/Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -36,16 +40,18 @@
       <option value="$PROJECT_DIR$/Source/RPG/BasePickup.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/RPG.Build.cs" />
       <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.h" />
-      <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.h" />
       <option value="$PROJECT_DIR$/Source/RPG/RPGCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.h" />
       <option value="$PROJECT_DIR$/Source/RPG/MainAnimInstance.cpp" />
-      <option value="$PROJECT_DIR$/Source/RPG/InteractionInterface.h" />
       <option value="$PROJECT_DIR$/Source/RPG/InteractiveProp.h" />
       <option value="$PROJECT_DIR$/Source/RPG/InteractiveProp.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" />
       <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/InteractionInterface.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/DialogueComponent.h" />
+      <option value="$PROJECT_DIR$/Source/RPG/DialogueComponent.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oRaO4C6m71QNLHLzRlbKoMG0P7" />
@@ -602,6 +608,10 @@
       <workItem from="1614648167390" duration="663000" />
       <workItem from="1614648860254" duration="1890000" />
       <workItem from="1617560619835" duration="7566000" />
+      <workItem from="1617570792208" duration="1630000" />
+      <workItem from="1617572716866" duration="1005000" />
+      <workItem from="1617576020990" duration="177000" />
+      <workItem from="1617578401188" duration="3701000" />
     </task>
     <servers />
   </component>

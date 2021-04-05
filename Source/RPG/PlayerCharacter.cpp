@@ -6,6 +6,7 @@
 
 
 #include "DrawDebugHelpers.h"
+#include "InteractionInterface.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -30,12 +31,11 @@ APlayerCharacter::APlayerCharacter()
 
 	/** Create Sphere Collider*/
 	SphereCollider = CreateDefaultSubobject<USphereComponent>(TEXT("Interaction Sphere"));
-	SphereCollider->SetupAttachment(GetRootComponent());
-	SphereCollider->SetSphereRadius(150.f);
-	SphereCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
-	SphereCollider->SetCollisionResponseToChannel(nullptr, ECollisionResponse::ECR_Overlap);
-	SphereCollider->OnComponentBeginOverlap.AddDynamic(this, &APlayerCharacter::OnXXXOverlapBegin);
-	SphereCollider->OnComponentEndOverlap.AddDynamic(this, &APlayerCharacter::OnXXXOverlapEnd);
+	SphereCollider->SetSphereRadius(25.f);
+	SphereCollider->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	SphereCollider->SetCollisionResponseToAllChannels(ECR_Ignore);
+	SphereCollider->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+	SphereCollider->SetupAttachment(RootComponent);
 
 	/** Set size for collision capsule */
 	GetCapsuleComponent()->SetCapsuleSize(48.f, 95.f);
@@ -100,19 +100,46 @@ void APlayerCharacter::ShiftKeyUp()
 	bShiftKeyDown = false;
 }
 
-void APlayerCharacter::OnOverlapBegin(AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
-	bool bFromSweep, const FHitResult& SweepResult)
+
+void APlayerCharacter::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+                                    UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Other Actor Found"));
+	if (OtherActor->GetClass()->ImplementsInterface(UInteractionInterface::StaticClass()))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Actor w/ Interaction Found"));
+		interactables.AddUnique(OtherActor);
+	}
+	else
+	{
+		auto OAComp = OtherActor->GetComponentsByInterface(UInteractionInterface::StaticClass());
+		for (auto comp : OAComp)
+		{
+			IInteractionInterface* InteractiveActor = Cast<IInteractionInterface>(comp);
+			interactables.AddUnique(Cast<AActor>(InteractiveActor));
+		}
+	}
 }
 
-void APlayerCharacter::OnOverlapEnd(AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+void APlayerCharacter::EndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Other Actor Found"));
+	if (OtherActor->GetClass()->ImplementsInterface(UInteractionInterface::StaticClass()))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Actor w/ Interaction Found"));
+		interactables.Remove(OtherActor);
+	}
 }
+
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
-	Super::BeginPlay();	
+	Super::BeginPlay();
+
+	SphereCollider->OnComponentBeginOverlap.AddDynamic(this, &APlayerCharacter::BeginOverlap);
+	SphereCollider->OnComponentEndOverlap.AddDynamic(this, &APlayerCharacter::EndOverlap);
 }
 
 void APlayerCharacter::SetStaminaUpdate(float DeltaTime)
@@ -279,26 +306,11 @@ FVector LineTraceDistance;
 
 void APlayerCharacter::Interaction()
 {
-	/*FVector Start;
-	FVector End;
-	FVector PlayerEyesLoc;
-	FRotator PlayerEyesRot;
-	GetActorEyesViewPoint(PlayerEyesLoc, PlayerEyesRot);
-	Start = PlayerEyesLoc;
-	End = PlayerEyesLoc + (PlayerEyesRot.Vector() * LineTraceDistance);
-	FCollisionQueryParams TraceParams(FName(TEXT("InteractTrace")), true, this);
-	FHitResult InteractHit = FHitResult(ForceInit);
-	bool bIsHit = GetWorld()->LineTraceSingleByChannel(InteractHit, Start, End, ECC_GameTraceChannel3, TraceParams);
-	if(bIsHit)
+	if(interactables.Num()>0)
 	{
-		// start to end, green, will lines always stay on, depth priority, thickness of line
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 5.f, ECC_WorldStatic, 1.f);
-		// implements interface
-		/*if(InteractHit.GetActor()->GetClass()->ImplementsInterface(UInteractiveActor::StaticClass()))
-		{
-			IIntera::Execute_Interact(InteractHit.GetActor());
-		}#1#
-	}*/
+		//TODO: Add logic to check for closest; will use first object for now
+		IInteractionInterface::Execute_OnInteraction(interactables[0]);
+	}
 }
 
 

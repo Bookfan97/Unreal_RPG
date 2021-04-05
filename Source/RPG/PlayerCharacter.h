@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+
+#include "InteractionInterface.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
@@ -77,11 +79,16 @@ public:
 	void ShiftKeyUp();
 
 	UFUNCTION()
-     void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+         void BeginOverlap(UPrimitiveComponent* OverlappedComponent, 
+                           AActor* OtherActor, 
+                           UPrimitiveComponent* OtherComp, 
+                           int32 OtherBodyIndex, 
+                           bool bFromSweep, 
+                           const FHitResult &SweepResult );
 	UFUNCTION()
-        void OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void EndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	
+	TArray<AActor*> interactables;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Movement")
 	float sprintSpeed;
 	
