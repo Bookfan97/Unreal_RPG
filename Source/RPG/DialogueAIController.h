@@ -13,5 +13,4 @@ UCLASS()
 class RPG_API ADialogueAIController : public AAIController
 {
 	GENERATED_BODY()
-	
 };

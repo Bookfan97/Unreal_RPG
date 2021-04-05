@@ -18,6 +18,14 @@ public:
 	// Sets default values for this component's properties
 	UDialogueComponent();
 
+	//Reference to UMG asset in editor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Widgets")
+	TSubclassOf<class UUserWidget> DialogueOverlayAsset;
+
+	//Variable to hold widget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Widgets")
+	UUserWidget* DialogueOverlay;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

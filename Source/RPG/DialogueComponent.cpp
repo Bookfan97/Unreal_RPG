@@ -4,6 +4,8 @@
 #include "DialogueComponent.h"
 
 #include "DialogueAIController.h"
+#include "Blueprint/UserWidget.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UDialogueComponent::UDialogueComponent()
@@ -35,6 +37,22 @@ void UDialogueComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 
 void UDialogueComponent::OnInteraction_Implementation()
 {
+	UWorld* world = GetWorld();
+	APlayerController* PlayerController = world->GetFirstPlayerController();
+	FInputModeUIOnly InputModeUIOnly;
 	
+	//Create the HUD Overlay
+	DialogueOverlay = CreateWidget<UUserWidget>(UGameplayStatics::GetPlayerController(GetWorld(), 0), DialogueOverlayAsset);
+	//TODO: Bind to OnExit
+		
+	//Add to viewport/Display on screen
+	DialogueOverlay->AddToViewport();
+	DialogueOverlay->SetVisibility(ESlateVisibility::Visible);
+	InputModeUIOnly.SetWidgetToFocus(DialogueOverlay->TakeWidget());
+	InputModeUIOnly.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+	PlayerController->SetInputMode(InputModeUIOnly);
+	PlayerController->bShowMouseCursor = true;
+	//TODO: Stop behavior tree
+	//TODO: Remove from parent
 }
 

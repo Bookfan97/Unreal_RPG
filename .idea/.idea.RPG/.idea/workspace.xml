@@ -6,20 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75afa1d3-0751-4fa4-a914-d32128fa0772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/MyInteractiveProp.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueAIController.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueAIController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueComponent.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/RPG/DialogueComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPG.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/RPG.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MainPlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_MainPlayerController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/HUD/HUD_Overlay.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/HUD/WBP_HealthBar.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/HUD/WBP_ManaBar.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/HUD/WBP_StaminaBar.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RPG/DialogueAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/DialogueAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RPG/DialogueComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/DialogueComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RPG/DialogueComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RPG/DialogueComponent.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +45,7 @@
       <option value="$PROJECT_DIR$/Source/RPG/PlayerCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/RPG/InteractionInterface.h" />
       <option value="$PROJECT_DIR$/Source/RPG/MainPlayerController.cpp" />
+      <option value="$PROJECT_DIR$/Source/RPG/DialogueAIController.h" />
       <option value="$PROJECT_DIR$/Source/RPG/DialogueComponent.h" />
       <option value="$PROJECT_DIR$/Source/RPG/DialogueComponent.cpp" />
     </changedPaths>
@@ -612,6 +608,7 @@
       <workItem from="1617572716866" duration="1005000" />
       <workItem from="1617576020990" duration="177000" />
       <workItem from="1617578401188" duration="3701000" />
+      <workItem from="1617595747072" duration="3481000" />
     </task>
     <servers />
   </component>
